@@ -1,0 +1,1565 @@
+@font-face {
+  font-family: 'TTFirsNeue-Regular';
+  src: url("../font/TTFirsNeue-Regular.svg"), url("../font/TTFirsNeue-Regular.eot"), url("../font/TTFirsNeue-Regular.ttf"), url("../font/TTFirsNeue-Regular.woff"), url("../font/TTFirsNeue-Regular.woff2");
+}
+
+/* line 10, ../work/Promodex/scss/style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 14, ../work/Promodex/scss/style.scss */
+body {
+  font-family: 'TTFirsNeue-Regular', sans-serif;
+  background: #060606;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* line 22, ../work/Promodex/scss/style.scss */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 27, ../work/Promodex/scss/style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 31, ../work/Promodex/scss/style.scss */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* line 37, ../work/Promodex/scss/style.scss */
+.hidden {
+  display: none;
+}
+
+/* line 41, ../work/Promodex/scss/style.scss */
+.header .container {
+  max-width: 1740px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* line 47, ../work/Promodex/scss/style.scss */
+.header {
+  padding: 36px 0 0 0;
+  position: relative;
+  height: 100vh;
+}
+
+/* line 52, ../work/Promodex/scss/style.scss */
+.header:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 390px;
+  height: 150px;
+  right: -220px;
+  background: linear-gradient(180deg, #562D6A -6.63%, #215AEE 100.18%);
+  filter: blur(70px);
+  transform: rotate(-44.32deg);
+  z-index: 0;
+}
+
+/* line 65, ../work/Promodex/scss/style.scss */
+.header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -55px;
+  background: #137A67;
+  filter: blur(100px);
+  transform: rotate(107.41deg);
+  z-index: 0;
+}
+
+/* line 78, ../work/Promodex/scss/style.scss */
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+}
+
+/* line 85, ../work/Promodex/scss/style.scss */
+.header__inner__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 90, ../work/Promodex/scss/style.scss */
+.header__inner__nav__menu, .header__inner__nav__contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 97, ../work/Promodex/scss/style.scss */
+.header__inner__nav__menu {
+  margin-right: 134px;
+  overflow: hidden;
+}
+
+/* line 101, ../work/Promodex/scss/style.scss */
+.header__inner__nav__menu__list {
+  margin-right: 60px;
+  height: 18px;
+  overflow: hidden;
+}
+
+/* line 106, ../work/Promodex/scss/style.scss */
+.header__inner__nav__menu__list:last-child {
+  margin-right: 0;
+}
+
+/* line 110, ../work/Promodex/scss/style.scss */
+.header__inner__nav__menu__list__link {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: block;
+}
+
+/* line 119, ../work/Promodex/scss/style.scss */
+.header__inner__nav__menu__list__block {
+  animation: transfOne 1s;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* line 124, ../work/Promodex/scss/style.scss */
+.header__inner__nav__menu__list__block.active {
+  transform-style: preserve-3d;
+  animation: transf 1s;
+}
+
+/* line 132, ../work/Promodex/scss/style.scss */
+.header__inner__nav__burger {
+  display: block;
+  cursor: pointer;
+}
+
+/* line 136, ../work/Promodex/scss/style.scss */
+.header__inner__nav__burger:after, .header__inner__nav__burger:before,
+.header__inner__nav__burger span {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #ffffff;
+}
+
+/* line 146, ../work/Promodex/scss/style.scss */
+.header__inner__nav__burger:before,
+.header__inner__nav__burger span {
+  margin-bottom: 10px;
+}
+
+/* line 152, ../work/Promodex/scss/style.scss */
+.header__inner__nav__contacts {
+  margin-right: 60px;
+}
+
+/* line 155, ../work/Promodex/scss/style.scss */
+.header__inner__nav__contacts__list {
+  margin-right: 13px;
+}
+
+/* line 158, ../work/Promodex/scss/style.scss */
+.header__inner__nav__contacts__list svg {
+  margin-left: 8px;
+}
+
+/* line 162, ../work/Promodex/scss/style.scss */
+.header__inner__nav__contacts__list:last-child {
+  margin-right: 0;
+}
+
+/* line 166, ../work/Promodex/scss/style.scss */
+.header__inner__nav__contacts__list__link {
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+/* line 174, ../work/Promodex/scss/style.scss */
+.header__inner__nav__button {
+  background: #FFFFFF;
+  border-radius: 28px;
+  border: none;
+  padding: 20px 34px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* line 182, ../work/Promodex/scss/style.scss */
+.header__inner__nav__button:hover {
+  background: linear-gradient(90deg, #09D0F3 0%, #3198F4 47%, #733BF5 100%);
+  color: #FFFFFF;
+}
+
+/* line 190, ../work/Promodex/scss/style.scss */
+.header__scroll {
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 88.43px;
+  height: 89.1px;
+  position: relative;
+}
+
+/* line 199, ../work/Promodex/scss/style.scss */
+.header__scroll.rotating {
+  -webkit-animation: rotating 10s linear infinite;
+}
+
+/* line 203, ../work/Promodex/scss/style.scss */
+.header__scroll span {
+  display: inline-block;
+  position: absolute;
+  transform: translate(40px, 0px) rotate(var(--rot)) translate(0, -38px);
+  font-size: 8px;
+  color: #B8B8B8;
+  text-transform: uppercase;
+}
+
+/* line 213, ../work/Promodex/scss/style.scss */
+.header__question {
+  width: 135.95px;
+  height: 115.25px;
+  display: flex;
+  align-items: center;
+  transform: rotate(45deg);
+}
+
+/* line 220, ../work/Promodex/scss/style.scss */
+.header__question span {
+  display: inline-block;
+  position: absolute;
+  transform: translate(65px, 3px) rotate(var(--rot)) translate(0, -60px);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 8px;
+}
+
+/* line 229, ../work/Promodex/scss/style.scss */
+.header__question:after {
+  content: 'SUBMIT APPLICATION';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 41px;
+  color: #FFFFFF;
+  text-align: center;
+  transform: rotate(-45deg);
+  font-size: 14px;
+}
+
+/* line 243, ../work/Promodex/scss/style.scss */
+.menu {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #060606;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1003;
+}
+
+/* line 254, ../work/Promodex/scss/style.scss */
+.menu__information {
+  padding: 50px 70px 50px 90px;
+  width: 100%;
+}
+
+/* line 258, ../work/Promodex/scss/style.scss */
+.menu__information__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 175px;
+}
+
+/* line 264, ../work/Promodex/scss/style.scss */
+.menu__information__header__language {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 269, ../work/Promodex/scss/style.scss */
+.menu__information__header__language__list {
+  margin-right: 20px;
+}
+
+/* line 272, ../work/Promodex/scss/style.scss */
+.menu__information__header__language__list:last-child {
+  margin-right: 0;
+}
+
+/* line 276, ../work/Promodex/scss/style.scss */
+.menu__information__header__language__list__link {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 282, ../work/Promodex/scss/style.scss */
+.menu__information__header__language__list__link.active-menu {
+  color: #FFFFFF;
+}
+
+/* line 290, ../work/Promodex/scss/style.scss */
+.menu__information__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 295, ../work/Promodex/scss/style.scss */
+.menu__information__block__contact__title {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 140%;
+}
+
+/* line 302, ../work/Promodex/scss/style.scss */
+.menu__information__block__contact__subtitle {
+  color: #969A9F;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 310, ../work/Promodex/scss/style.scss */
+.menu__information__block__contact__tel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* line 315, ../work/Promodex/scss/style.scss */
+.menu__information__block__contact__tel__link {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+
+/* line 322, ../work/Promodex/scss/style.scss */
+.menu__information__block__contact__tel svg {
+  margin-left: 15px;
+}
+
+/* line 328, ../work/Promodex/scss/style.scss */
+.menu__information__block__contact__soc .footer__top__social__elem {
+  margin: 0;
+}
+
+/* line 334, ../work/Promodex/scss/style.scss */
+.menu__information__block__nav {
+  flex-direction: column;
+  margin: 0;
+  align-items: flex-start;
+  transform: translateY(-150%);
+  animation: ani 2s forwards;
+}
+
+/* line 341, ../work/Promodex/scss/style.scss */
+.menu__information__block__nav__list {
+  margin: 0 0 40px;
+  height: 50px;
+}
+
+/* line 345, ../work/Promodex/scss/style.scss */
+.menu__information__block__nav__list:last-child {
+  margin-bottom: 0;
+}
+
+/* line 349, ../work/Promodex/scss/style.scss */
+.menu__information__block__nav__list__block {
+  animation: transfOneMob 1s;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* line 354, ../work/Promodex/scss/style.scss */
+.menu__information__block__nav__list__block:hover .menu__information__block__nav__list__block__link {
+  color: #FFFFFF !important;
+}
+
+/* line 358, ../work/Promodex/scss/style.scss */
+.menu__information__block__nav__list__block__link {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+/* line 366, ../work/Promodex/scss/style.scss */
+.menu__information__block__nav__list__block.active {
+  transform-style: preserve-3d;
+  animation: transfMob 1s;
+}
+
+/* line 377, ../work/Promodex/scss/style.scss */
+.menu__img img {
+  height: 100%;
+}
+
+/* line 382, ../work/Promodex/scss/style.scss */
+.menu__close {
+  position: absolute;
+  right: 84px;
+  top: 34px;
+  background: #202020;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* line 397, ../work/Promodex/scss/style.scss */
+.hover__menu {
+  overflow: hidden;
+  display: none;
+}
+
+/* line 401, ../work/Promodex/scss/style.scss */
+.hover__menu:before {
+  content: '';
+  display: block;
+  border-top: 1px solid #3D3D3D;
+  margin-top: 30px;
+  width: 100%;
+  height: 1px;
+  position: relative;
+  z-index: 1002;
+}
+
+/* line 413, ../work/Promodex/scss/style.scss */
+.header__list__hover {
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(30px);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  top: 0;
+  padding: 120px 0 0 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* line 427, ../work/Promodex/scss/style.scss */
+.header__list__hover__menu {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+/* line 431, ../work/Promodex/scss/style.scss */
+.header__list__hover__menu__inner {
+  margin-bottom: 48px;
+  margin-right: 100px;
+}
+
+/* line 435, ../work/Promodex/scss/style.scss */
+.header__list__hover__menu__inner:last-child {
+  margin-bottom: 0;
+}
+
+/* line 439, ../work/Promodex/scss/style.scss */
+.header__list__hover__menu__inner__title {
+  padding: 0 0 16px 0;
+  border-bottom: 1px dashed #969A9F;
+  margin-bottom: 16px;
+}
+
+/* line 445, ../work/Promodex/scss/style.scss */
+.header__list__hover__menu__inner__link {
+  margin-bottom: 14px;
+}
+
+/* line 448, ../work/Promodex/scss/style.scss */
+.header__list__hover__menu__inner__link:last-child {
+  margin-bottom: 0;
+}
+
+/* line 452, ../work/Promodex/scss/style.scss */
+.header__list__hover__menu__inner__link:last-child .header__list__hover__menu__inner__name {
+  color: #FFFFFF;
+  text-decoration-line: underline;
+  font-size: 16px;
+}
+
+/* line 459, ../work/Promodex/scss/style.scss */
+.header__list__hover__menu__inner__name {
+  color: #B0B0B0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+/* line 469, ../work/Promodex/scss/style.scss */
+.container__banner {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20%;
+  z-index: 14;
+  width: 100%;
+}
+
+/* line 477, ../work/Promodex/scss/style.scss */
+.container__banner:after {
+  content: '';
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: url("../img/Vector.png") no-repeat;
+  position: absolute;
+  left: 40px;
+  top: 53px;
+}
+
+@keyframes ani {
+  0% {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes transf {
+  0% {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+  100% {
+    transform: translate3d(0px, -20px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
+
+@keyframes transfOne {
+  0% {
+    transform: translate3d(0px, -20px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+@keyframes transfMob {
+  0% {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+  100% {
+    transform: translate3d(0px, -50px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
+
+@keyframes transfOneMob {
+  0% {
+    transform: translate3d(0px, -50px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
+
+/* line 545, ../work/Promodex/scss/style.scss */
+.cursor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: .5s, opacity .6s linear;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+  z-index: 15;
+}
+
+/* line 557, ../work/Promodex/scss/style.scss */
+.box-pointer-hidden {
+  display: none;
+}
+
+/* line 561, ../work/Promodex/scss/style.scss */
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Union.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 6;
+}
+
+/* line 572, ../work/Promodex/scss/style.scss */
+.banner:before {
+  content: '';
+  display: block;
+  background: url("../img/bckleft.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 250px;
+  left: 0;
+  width: 634px;
+  height: 100%;
+}
+
+/* line 585, ../work/Promodex/scss/style.scss */
+.cookies {
+  position: absolute;
+  bottom: 29px;
+  width: 100%;
+  z-index: 10;
+}
+
+/* line 591, ../work/Promodex/scss/style.scss */
+.cookies .header__inner__nav__button {
+  width: 176px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* line 599, ../work/Promodex/scss/style.scss */
+.cookies .header__inner__nav__button:hover {
+  background: #FFFFFF;
+}
+
+/* line 604, ../work/Promodex/scss/style.scss */
+.cookies__container {
+  max-width: 873px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(98.05% 261.61% at 1.95% 3.59%, rgba(131, 180, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(42px);
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: 1px solid #FFFFFF;
+}
+
+/* line 616, ../work/Promodex/scss/style.scss */
+.cookies img {
+  width: 55px;
+  height: 55px;
+  margin-right: 15px;
+}
+
+/* line 622, ../work/Promodex/scss/style.scss */
+.cookies__info {
+  color: #FFFFFF;
+  width: 65%;
+  margin-right: 40px;
+}
+
+/* line 629, ../work/Promodex/scss/style.scss */
+.about {
+  padding-top: 103px;
+  position: relative;
+}
+
+/* line 633, ../work/Promodex/scss/style.scss */
+.about:after {
+  content: '';
+  display: block;
+  background: url("../img/bckRight.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  right: -125px;
+  width: 363px;
+  height: 100%;
+}
+
+/* line 645, ../work/Promodex/scss/style.scss */
+.about__subtitle {
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+/* line 651, ../work/Promodex/scss/style.scss */
+.about__title {
+  font-size: 40px;
+  line-height: 52px;
+  color: #FFFFFF;
+  max-width: 951px;
+}
+
+/* line 659, ../work/Promodex/scss/style.scss */
+.info {
+  color: #FFFFFF;
+  margin-top: 180px;
+}
+
+/* line 663, ../work/Promodex/scss/style.scss */
+.info__number {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0;
+}
+
+/* line 669, ../work/Promodex/scss/style.scss */
+.info__inner {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0 0 0;
+}
+
+/* line 674, ../work/Promodex/scss/style.scss */
+.info__inner__title {
+  font-size: 40px;
+  line-height: 52px;
+  margin: 0;
+}
+
+/* line 680, ../work/Promodex/scss/style.scss */
+.info__inner__desc {
+  width: 58%;
+}
+
+/* line 683, ../work/Promodex/scss/style.scss */
+.info__inner__desc__title {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* line 689, ../work/Promodex/scss/style.scss */
+.info__inner__desc__link {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 21px;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  width: 191px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* line 703, ../work/Promodex/scss/style.scss */
+.info__inner__desc__blocks {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* line 709, ../work/Promodex/scss/style.scss */
+.info__inner__desc__blocks__blck {
+  width: 39%;
+}
+
+/* line 712, ../work/Promodex/scss/style.scss */
+.info__inner__desc__blocks__blck__title {
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* line 718, ../work/Promodex/scss/style.scss */
+.info__inner__desc__blocks__blck__information {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* line 728, ../work/Promodex/scss/style.scss */
+.project {
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 180px;
+  position: relative;
+}
+
+/* line 734, ../work/Promodex/scss/style.scss */
+.project:before {
+  content: '';
+  display: block;
+  background: url("../img/workbefore.png") no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 585px;
+  height: 100%;
+}
+
+/* line 745, ../work/Promodex/scss/style.scss */
+.project:after {
+  content: '';
+  display: block;
+  background: url("../img/workafter.png") no-repeat;
+  position: absolute;
+  bottom: -230px;
+  right: 0;
+  width: 585px;
+  height: 100%;
+  transform: rotate(180deg);
+}
+
+/* line 757, ../work/Promodex/scss/style.scss */
+.project__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+/* line 763, ../work/Promodex/scss/style.scss */
+.project__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 53px;
+}
+
+/* line 770, ../work/Promodex/scss/style.scss */
+.project__pages__link {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  padding: 16px 40px;
+}
+
+/* line 777, ../work/Promodex/scss/style.scss */
+.project__pages__link.active {
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+}
+
+/* line 784, ../work/Promodex/scss/style.scss */
+.project__inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 53px;
+}
+
+/* line 791, ../work/Promodex/scss/style.scss */
+.project__inner__card {
+  width: 510px;
+  height: 694px;
+  position: relative;
+  cursor: url("../img/arrow.png") 100 100, auto;
+}
+
+/* line 797, ../work/Promodex/scss/style.scss */
+.project__inner__card svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 805, ../work/Promodex/scss/style.scss */
+.project__inner__card__description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  margin: 0 40px 40px 40px;
+}
+
+/* line 812, ../work/Promodex/scss/style.scss */
+.project__inner__card__description__title {
+  color: #FFFFFF;
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* line 820, ../work/Promodex/scss/style.scss */
+.project__inner__card__description__text {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* line 831, ../work/Promodex/scss/style.scss */
+.project__all {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  background: none;
+  border: 1.6px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 78px 40px;
+  cursor: pointer;
+  margin-top: 70px;
+}
+
+/* line 845, ../work/Promodex/scss/style.scss */
+.partners {
+  margin-bottom: 180px;
+}
+
+/* line 848, ../work/Promodex/scss/style.scss */
+.partners__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* line 856, ../work/Promodex/scss/style.scss */
+.partners__subtitle {
+  color: #969A9F;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* line 865, ../work/Promodex/scss/style.scss */
+.partners__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* line 872, ../work/Promodex/scss/style.scss */
+.partners__list__inner {
+  width: 100px;
+}
+
+/* line 876, ../work/Promodex/scss/style.scss */
+.partners__list__inner__link img {
+  width: 100%;
+}
+
+/* line 884, ../work/Promodex/scss/style.scss */
+.comments {
+  background-size: cover;
+  background: url("../img/backgrountComments.jpg") center;
+  padding: 79px 0 88px;
+  margin-bottom: 180px;
+}
+
+/* line 890, ../work/Promodex/scss/style.scss */
+.comments__client {
+  background: #16161A;
+  width: 760px;
+  color: #FFFFFF;
+  padding: 50px 70px;
+}
+
+/* line 896, ../work/Promodex/scss/style.scss */
+.comments__client__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+}
+
+/* line 902, ../work/Promodex/scss/style.scss */
+.comments__client__text {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* line 907, ../work/Promodex/scss/style.scss */
+.comments__client__more {
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+}
+
+/* line 914, ../work/Promodex/scss/style.scss */
+.comments__client__user {
+  margin-top: 67px;
+  display: flex;
+  align-items: center;
+}
+
+/* line 919, ../work/Promodex/scss/style.scss */
+.comments__client__user__link {
+  border-radius: 50%;
+  background: linear-gradient(110.74deg, rgba(183, 162, 243, 0.15) 0%, rgba(205, 192, 255, 0.04) 100%);
+  backdrop-filter: blur(42px);
+  padding: 20.44px 21.67px;
+}
+
+/* line 926, ../work/Promodex/scss/style.scss */
+.comments__client__user__info {
+  margin-left: 20px;
+  margin-right: 135px;
+}
+
+/* line 930, ../work/Promodex/scss/style.scss */
+.comments__client__user__info__name {
+  font-weight: 500;
+  font-size: 22px;
+  margin: 0;
+}
+
+/* line 936, ../work/Promodex/scss/style.scss */
+.comments__client__user__info__work {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #969A9F;
+  margin: 0;
+}
+
+/* line 946, ../work/Promodex/scss/style.scss */
+.comments__client__user__button__inner {
+  border-radius: 50%;
+  padding: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 958, ../work/Promodex/scss/style.scss */
+.background {
+  position: relative;
+}
+
+/* line 961, ../work/Promodex/scss/style.scss */
+.background:before {
+  content: '';
+  display: block;
+  background: url("../img/ratingbefore.png") no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 585px;
+  height: 100%;
+}
+
+/* line 973, ../work/Promodex/scss/style.scss */
+.premium {
+  color: #FFFFFF;
+  margin-bottom: 194px;
+}
+
+/* line 977, ../work/Promodex/scss/style.scss */
+.premium__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* line 985, ../work/Promodex/scss/style.scss */
+.premium__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 990, ../work/Promodex/scss/style.scss */
+.premium__list__inner__place {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 995, ../work/Promodex/scss/style.scss */
+.premium__list__inner__place__info {
+  text-align: center;
+}
+
+/* line 998, ../work/Promodex/scss/style.scss */
+.premium__list__inner__place__info__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+}
+
+/* line 1005, ../work/Promodex/scss/style.scss */
+.premium__list__inner__place__info__subtitle {
+  margin: 0;
+  color: #969A9F;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* line 1016, ../work/Promodex/scss/style.scss */
+.premium__list__inner__description {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* line 1021, ../work/Promodex/scss/style.scss */
+.premium__list__inner__description span {
+  display: block;
+}
+
+/* line 1029, ../work/Promodex/scss/style.scss */
+.team {
+  color: #FFFFFF;
+  margin-bottom: 180px;
+}
+
+/* line 1033, ../work/Promodex/scss/style.scss */
+.team .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 1038, ../work/Promodex/scss/style.scss */
+.team__photo {
+  width: 444px;
+  margin-right: 66px;
+  overflow: hidden;
+}
+
+/* line 1043, ../work/Promodex/scss/style.scss */
+.team__photo img {
+  width: 444px;
+}
+
+/* line 1048, ../work/Promodex/scss/style.scss */
+.team__project {
+  width: 172px;
+}
+
+/* line 1051, ../work/Promodex/scss/style.scss */
+.team__project__list {
+  margin-bottom: 70px;
+}
+
+/* line 1054, ../work/Promodex/scss/style.scss */
+.team__project__list:last-child {
+  margin-bottom: 0;
+}
+
+/* line 1058, ../work/Promodex/scss/style.scss */
+.team__project__list__numerous {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 64px;
+  margin: 0;
+}
+
+/* line 1065, ../work/Promodex/scss/style.scss */
+.team__project__list__information {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0;
+}
+
+/* line 1074, ../work/Promodex/scss/style.scss */
+.team__information {
+  width: 542px;
+}
+
+/* line 1077, ../work/Promodex/scss/style.scss */
+.team__information__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  margin-bottom: 22px;
+}
+
+/* line 1084, ../work/Promodex/scss/style.scss */
+.team__information__text {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* line 1092, ../work/Promodex/scss/style.scss */
+.fot-client {
+  margin-bottom: 110px;
+}
+
+/* line 1095, ../work/Promodex/scss/style.scss */
+.fot-client__text {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 46px;
+  width: 50%;
+}
+
+/* line 1101, ../work/Promodex/scss/style.scss */
+.fot-client__text__link {
+  background: linear-gradient(45deg, #09D0F3 33%, #3198F4 66%, #733BF5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #FFFFFF;
+  border-width: 2px;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-image: linear-gradient(45deg, #09D0F3 33%, #3198F4 66%, #733BF5) 1;
+}
+
+/* line 1117, ../work/Promodex/scss/style.scss */
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+/* line 1123, ../work/Promodex/scss/style.scss */
+.footer__top__social__mail {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+}
+
+/* line 1130, ../work/Promodex/scss/style.scss */
+.footer__top__social__elem {
+  display: flex;
+  margin-top: 30px;
+}
+
+/* line 1134, ../work/Promodex/scss/style.scss */
+.footer__top__social__elem__inner {
+  background: #FFFFFF;
+  padding: 16px;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+
+/* line 1140, ../work/Promodex/scss/style.scss */
+.footer__top__social__elem__inner:last-child {
+  margin-right: 0;
+}
+
+/* line 1144, ../work/Promodex/scss/style.scss */
+.footer__top__social__elem__inner__link {
+  display: block;
+  text-align: center;
+  width: 18px;
+  height: 18px;
+}
+
+/* line 1155, ../work/Promodex/scss/style.scss */
+.footer__top__nav__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+  margin-bottom: 26px;
+}
+
+/* line 1164, ../work/Promodex/scss/style.scss */
+.footer__top__nav__number__link {
+  color: #CACACA;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* line 1169, ../work/Promodex/scss/style.scss */
+.footer__top__nav__number__link span {
+  display: block;
+}
+
+/* line 1177, ../work/Promodex/scss/style.scss */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+/* line 1182, ../work/Promodex/scss/style.scss */
+.footer__bottom__menu {
+  display: flex;
+}
+
+/* line 1185, ../work/Promodex/scss/style.scss */
+.footer__bottom__menu__list {
+  color: #929292;
+  margin-right: 12px;
+}
+
+/* line 1189, ../work/Promodex/scss/style.scss */
+.footer__bottom__menu__list:last-child {
+  margin-right: 0;
+}
+
+/* line 1193, ../work/Promodex/scss/style.scss */
+.footer__bottom__menu__list__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #929292;
+}
+
+/* line 1202, ../work/Promodex/scss/style.scss */
+.footer__bottom__cooperating {
+  color: #929292;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media only screen and (max-width: 1410px) {
+  /* line 1212, ../work/Promodex/scss/style.scss */
+  .header__inner__nav__menu {
+    margin-right: 60px;
+  }
+  /* line 1215, ../work/Promodex/scss/style.scss */
+  .premium,
+  .team {
+    position: relative;
+    z-index: 6;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  /* line 1223, ../work/Promodex/scss/style.scss */
+  .header__inner__nav__menu {
+    display: none;
+  }
+  /* line 1226, ../work/Promodex/scss/style.scss */
+  .about__subtitle,
+  .about__title {
+    position: relative;
+    z-index: 1;
+  }
+  /* line 1231, ../work/Promodex/scss/style.scss */
+  .project__title,
+  .project__subtitle,
+  .project__pages,
+  .project__inner {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  /* line 1241, ../work/Promodex/scss/style.scss */
+  .project__pages {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  /* line 1245, ../work/Promodex/scss/style.scss */
+  .project__pages {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* line 1249, ../work/Promodex/scss/style.scss */
+  .project__pages__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 148px;
+    height: 48px;
+    padding: 0;
+    margin-right: 20px;
+  }
+  /* line 1258, ../work/Promodex/scss/style.scss */
+  .project__pages__link:last-child {
+    margin-right: 0;
+  }
+  /* line 1262, ../work/Promodex/scss/style.scss */
+  .team .container {
+    flex-wrap: wrap;
+  }
+  /* line 1265, ../work/Promodex/scss/style.scss */
+  .menu__information__block .menu__information__block__nav {
+    display: block;
+  }
+  /* line 1268, ../work/Promodex/scss/style.scss */
+  .menu__img {
+    display: none;
+  }
+  /* line 1271, ../work/Promodex/scss/style.scss */
+  .menu__close {
+    right: 10px;
+    top: 3px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  /* line 1278, ../work/Promodex/scss/style.scss */
+  .fot-client__text {
+    width: 100%;
+  }
+  /* line 1281, ../work/Promodex/scss/style.scss */
+  .footer__top {
+    flex-wrap: wrap;
+  }
+  /* line 1284, ../work/Promodex/scss/style.scss */
+  .footer__top__social,
+  .footer__top__nav {
+    margin-right: 15px;
+  }
+  /* line 1288, ../work/Promodex/scss/style.scss */
+  .info__inner {
+    flex-direction: column;
+  }
+  /* line 1291, ../work/Promodex/scss/style.scss */
+  .info__inner__desc {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  /* line 1296, ../work/Promodex/scss/style.scss */
+  .header__inner__nav__contacts {
+    display: none;
+  }
+  /* line 1299, ../work/Promodex/scss/style.scss */
+  .project__pages {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  /* line 1303, ../work/Promodex/scss/style.scss */
+  .comments__client {
+    width: 100%;
+  }
+  /* line 1306, ../work/Promodex/scss/style.scss */
+  .premium__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  /* line 1311, ../work/Promodex/scss/style.scss */
+  .footer__bottom {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  /* line 1315, ../work/Promodex/scss/style.scss */
+  .team__information {
+    width: 100%;
+  }
+  /* line 1318, ../work/Promodex/scss/style.scss */
+  .team__photo {
+    width: 50%;
+    margin-right: 0;
+  }
+  /* line 1322, ../work/Promodex/scss/style.scss */
+  .menu__information__header {
+    margin-bottom: 20px;
+  }
+  /* line 1325, ../work/Promodex/scss/style.scss */
+  .menu__information__block {
+    flex-direction: column;
+  }
+  /* line 1328, ../work/Promodex/scss/style.scss */
+  .header__inner__nav__menu {
+    margin: 0 0 30px;
+  }
+  /* line 1331, ../work/Promodex/scss/style.scss */
+  .menu__information__block__nav__list {
+    margin: 0 0 20px;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  /* line 1336, ../work/Promodex/scss/style.scss */
+  .cookies__container {
+    flex-direction: column;
+  }
+  /* line 1339, ../work/Promodex/scss/style.scss */
+  .cookies__info {
+    width: 100%;
+    margin-right: 0;
+  }
+  /* line 1343, ../work/Promodex/scss/style.scss */
+  .comments__client__user {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  /* line 1347, ../work/Promodex/scss/style.scss */
+  .comments__client {
+    padding: 50px 20px;
+  }
+  /* line 1350, ../work/Promodex/scss/style.scss */
+  .cookies {
+    left: 0;
+  }
+  /* line 1353, ../work/Promodex/scss/style.scss */
+  .menu__information {
+    padding: 50px 20px 50px 20px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  /* line 1358, ../work/Promodex/scss/style.scss */
+  .header__inner__nav__button {
+    display: none;
+  }
+  /* line 1361, ../work/Promodex/scss/style.scss */
+  .cookies .header__inner__nav__button {
+    display: block;
+  }
+  /* line 1364, ../work/Promodex/scss/style.scss */
+  .about__title {
+    font-size: 28px;
+  }
+  /* line 1367, ../work/Promodex/scss/style.scss */
+  .cookies {
+    bottom: -90px;
+  }
+  /* line 1370, ../work/Promodex/scss/style.scss */
+  .comments__client__user__info {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  /* line 1375, ../work/Promodex/scss/style.scss */
+  .team__photo {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
